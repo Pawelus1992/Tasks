@@ -6,34 +6,31 @@ namespace Task1
 {
     class Program : MyList
     {
-        /*
-        const int listSize = 10;
-        const int minValue = 0;
-        const int maxValue = 100;
-*/
         static void Main(string[] args)
         {
             MyList list = new MyList(200);
 
             // 1
             list.popList();
-            //list.showAll();
+            list.showAll();
 
             // 2
             List<int> reservedThird = list.getReservedThird();
-            //showAllItems(reservedThird);
+            showAllItems(reservedThird);
 
             // 3
             List<int> avgList = list.getAvgList();
-            //showAllItems(avgList);
+            showAllItems(avgList);
 
             // 4
             List<int> onlyBig = list.getBiggerThen(90);
             showAllItems(onlyBig);
 
             // 5
-            //List<int> mList = list.getMultipledList();
-           // showAllItems(mList);
+            list.getMultipledItems();           
+
+
+            
 
 
 

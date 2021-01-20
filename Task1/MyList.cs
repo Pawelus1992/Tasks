@@ -12,18 +12,18 @@ namespace Task1
         const int minValue = 0;
         const int maxValue = 100;
 
-        public MyList() 
+        public MyList()
         {
             list = new List<int>();
             listSize = 0;
         }
-        
+
         public MyList(int size)
         {
             list = new List<int>();
             listSize = size;
         }
-        
+
         public void showAll()
         {
             foreach (var item in list)
@@ -42,11 +42,11 @@ namespace Task1
                 for (int i = 0; i < listSize; i++)
                 {
                     list.Add(random.Next(minValue, maxValue));
-                }                
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw ex;                
+                throw ex;
             }
         }
 
@@ -56,7 +56,7 @@ namespace Task1
             List<int> tempList = new List<int>();
             list.Reverse();
             int i = 0;
-            foreach(var item in list)
+            foreach (var item in list)
             {
                 if (i == 0 || i % 3 == 0)
                     tempList.Add(item);
@@ -86,7 +86,7 @@ namespace Task1
 
 
         // 4
-        public List<int> getBiggerThen( int i)
+        public List<int> getBiggerThen(int i)
         {
             List<int> tempList = new List<int>();
             foreach (var item in list)
@@ -100,22 +100,19 @@ namespace Task1
 
 
         // 5
-        public void getMultipledList()
+        public void getMultipledItems()
         {
-            int temp;
             foreach (var item in list)
             {
-                for()
+                for (int i = 0; i < listSize; i++)
                 {
-
-                }
-                if (temp > 9000)
-                    Console.WriteLine("founded (" + ")");
+                    if (list[i] * item > 9000) { 
+                        Console.WriteLine("founded ("+item+","+i+")");                       
+                    }
+                }              
             }
         }
 
-
-
-
+      
     }
 }
